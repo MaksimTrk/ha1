@@ -1,0 +1,115 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://590.ua/uploads/1549877158.jpg');
+    background-size: cover;
+	line-height: 1.6;
+}
+
+h1 {
+    color: #ffffff;
+	line-height: 1.5;
+}
+
+h2 {
+    color: #008080;
+	line-height: 1.5;
+}
+
+p {
+    color: #ffffff;
+}
+
+a {
+    color: #ff5733;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+    border: none;
+}
+
+.product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.product-item img {
+    width: 50%;
+    height: auto;
+}
+
+.description-list {
+    list-style-type: lower-alpha;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.features-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #008080;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.definition-list {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+dd {
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
