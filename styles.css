@@ -2,7 +2,7 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('https://590.ua/uploads/1549877158.jpg');
+	background-color: #9ed3e1;
     background-size: cover;
 	line-height: 1.6;
 }
@@ -20,6 +20,27 @@ h2 {
 p {
     color: #ffffff;
 }
+
+h1 + p {
+    color: #ff5733;
+}
+h2 + p {
+    color: #3498db;
+}
+
+b {
+	color: #dddcda;
+}
+p b {
+	color: #06110b;
+	text-decoration: underline;
+}
+
+h1 > b {
+	color: #696867;
+	font-size: 50%;
+}
+
 
 a {
     color: #ff5733;
