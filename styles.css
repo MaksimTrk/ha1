@@ -2,19 +2,19 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     text-align: center;
-	background-color: #9ed3e1;
+    background-color: #9ed3e1;
     background-size: cover;
-	line-height: 1.6;
+    line-height: 1.6;
 }
 
 h1 {
     color: #ffffff;
-	line-height: 1.5;
+    line-height: 1.5;
 }
 
 h2 {
     color: #008080;
-	line-height: 1.5;
+    line-height: 1.5;
 }
 
 p {
@@ -24,33 +24,30 @@ p {
 h1 + p {
     color: #ff5733;
 }
+
 h2 + p {
     color: #3498db;
 }
 
 b {
-	color: #dddcda;
+    color: #dddcda;
 }
+
 p b {
-	color: #06110b;
-	text-decoration: underline;
+    color: #06110b;
+    text-decoration: underline;
 }
 
 h1 > b {
-	color: #696867;
-	font-size: 50%;
+    color: #696867;
+    font-size: 50%;
 }
 
-
 a {
-    color: #ff5733;
+    color: #8d4d3f;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-}
-
-a:hover {
-    color: #e74c3c;
 }
 
 table {
@@ -133,4 +130,63 @@ dd {
     margin-left: 20px;
     font-style: italic;
     color: #555;
+}
+
+.product-item {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    top: 20px; /* Зсуває елемент на 20px вниз */
+    left: 10px; 
+}
+
+a:link {
+    color: #008080;
+}
+
+a:visited {
+    color: #700fdf;
+}
+
+a:hover {
+    color: #ff5733;
+}
+
+a:active {
+    color: #19c213;
+}
+
+.product-item::before {
+    content: "*";
+    color: #f39c12;
+}
+
+.product-item::after {
+    content: "*";
+    color: #2ecc71;
+}
+
+table tr:first-child th {
+    color: #f1c40f; 
+}
+
+table tr:first-child td {
+    color: #f1c40f; 
+}
+
+.store-info {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.store-image {
+    width: 300px; 
+    float: left; 
+}
+
+.store-description {
+    text-align: left;
+    max-width: 600px; 
+    margin: 0 auto;
 }
