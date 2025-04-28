@@ -5,12 +5,19 @@
     <meta name="author" content="Трохименко Максим">
     <title>Каталог побутової техніки</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>
+    <h1 id="catalog-header">
         <div>Каталог побутової техніки</div>
         <b><span>Понад 10 років на ринку!</span></b>
     </h1>
+    <button onclick="changeBackground()">Змінити фон на 30 секунд</button>
+    <button onclick="redirectPage()">Перенаправити на іншу сторінку</button>
+    <button onclick="changeContent()">Змінити заголовок</button>
+    <button onclick="insertNewElement()">Вставити новий елемент</button>
+    <button onclick="manipulateNodes()">Маніпуляції з вузлами</button>
+    <button onclick="removeElement()">Видалити елемент</button>
     <div class="store-info">
         <img src="https://gylyajpole.city/upload/article/o_1eoc8ob0b1a3l97n1umc1851jeq6p.jpg" alt="Фото магазину" class="store-image">
         <div class="store-description">
@@ -63,8 +70,9 @@
     </div>
 </body>
 <footer>
-    <div><b>Натисніть щоб перейти до початку сторінки</b></div>
-    <a href="#top">Вгору</a>
-    <b>&lt;-кнопка</b>
+    <p>Цікавить робота в нас? Спробуйте пройти невеличку співбесіду:</p>
+    <button onclick="interview()">Пройти співбесіду</button>
+    <p>Розробник:</p>
+    <button onclick="showDeveloperInfo()">Інформація про розробника</button>
 </footer>
 </html>

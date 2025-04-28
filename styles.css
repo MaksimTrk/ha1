@@ -79,7 +79,7 @@ iframe {
     padding: 0;
 }
 
-.product-item {
+.productItem {
     margin: 20px;
     padding: 10px;
     background-color: white;
@@ -136,7 +136,7 @@ dd {
     float: left;
     margin-right: 20px;
     position: relative;
-    top: 20px; /* Зсуває елемент на 20px вниз */
+    top: 20px; 
     left: 10px; 
 }
 
