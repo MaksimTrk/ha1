@@ -25,11 +25,7 @@ function interview() {
     }
 }
 
-function showDeveloperInfo() {
-    let lastName = "Трохименко";
-    let firstName = "Максим";
-    let position = "Розробник"; 
-
+function showDeveloperInfo(lastName, firstName, position = "студент") {
     alert("Розробник: " + firstName + " " + lastName + "\nПосада: " + position);
 }
 
@@ -92,4 +88,105 @@ function removeElement() {
     const element = document.querySelector("x");
     element.remove(); 
 }
+
+// 1. Обробник для підсвічування елементів списку категорій товарів
+function handleClick(event) {
+    const clickedElement = event.currentTarget; 
+    clickedElement.style.backgroundColor = "#dcdcdc"; 
+    console.log("Клік по категорії: " + clickedElement.id); 
+
+    // Виводимо елемент на сторінку через infoDiv
+    document.getElementById("infoDiv").textContent = "Ви клікнули на категорію: " + clickedElement.id;
+}
+
+// 2. Призначення функції через атрибут (HTML)
+document.getElementById("washing-machines").setAttribute("onclick", "handleClick(event)");
+
+// 3. Призначення функції через властивість (JavaScript)
+const blendersElement = document.getElementById("blenders");
+blendersElement.onclick = handleClick;
+
+// 4. Використання addEventListener для однієї події з різними обробниками
+const refrigeratorsElement = document.getElementById("refrigerators");
+refrigeratorsElement.addEventListener("click", function() {
+    alert("Ви клікнули на холодильники!");
+});
+
+refrigeratorsElement.addEventListener("click", function() {
+    console.log("Додаткове повідомлення про холодильники.");
+});
+
+// 5. Призначення обробником об'єкта за допомогою handleEvent
+class ClickHandler {
+    handleEvent(event) {
+        alert("Ви клікнули на елемент: " + event.currentTarget.tagName);
+    }
+}
+
+const clickHandler = new ClickHandler();
+document.getElementById("microwaves").addEventListener("click", clickHandler);
+
+// 6. Видалення обробника події
+function removeHandler() {
+    document.getElementById("microwaves").removeEventListener("click", clickHandler);
+    alert("Обробник для мікрохвильовок видалено.");
+}
+setTimeout(removeHandler, 5000); 
+
+
+document.getElementById("category-list").addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+
+        const allItems = document.querySelectorAll("#category-list li");
+        allItems.forEach(item => item.style.backgroundColor = "");
+
+
+        event.target.style.backgroundColor = "#dcdcdc";
+    }
+});
+
+
+// обробник на меню
+document.getElementById("menu").addEventListener("click", function(event) {
+
+    if (event.target.tagName === "BUTTON") {
+        const action = event.target.getAttribute("data-action");
+
+
+        switch (action) {
+            case "changeBackground":
+                document.body.style.backgroundColor = "#f0f8ff";
+                break;
+            case "redirectPage":
+                window.location.href = "https://www.example.com";
+                break;
+            case "showAlert":
+                alert("Це повідомлення!");
+                break;
+            default:
+                console.log("Невідома дія");
+        }
+    }
+});
+
+//  обробник для меню з поведінкою
+document.getElementById("menu-behavior").addEventListener("click", function(event) {
+    if (event.target.tagName === "BUTTON") {
+        const action = event.target.getAttribute("data-action");
+
+        switch (action) {
+            case "addText":
+                const text = event.target.getAttribute("data-text");
+                document.getElementById("text-container").textContent = text;
+                break;
+            case "removeText":
+                document.getElementById("text-container").textContent = "";
+                break;
+            default:
+                console.log("Невідома дія");
+        }
+    }
+});
+
+
 

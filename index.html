@@ -12,12 +12,19 @@
         <div>Каталог побутової техніки</div>
         <b><span>Понад 10 років на ринку!</span></b>
     </h1>
-    <button onclick="changeBackground()">Змінити фон на 30 секунд</button>
-    <button onclick="redirectPage()">Перенаправити на іншу сторінку</button>
-    <button onclick="changeContent()">Змінити заголовок</button>
-    <button onclick="insertNewElement()">Вставити новий елемент</button>
-    <button onclick="manipulateNodes()">Маніпуляції з вузлами</button>
-    <button onclick="removeElement()">Видалити елемент</button>
+    <h2>Меню</h2>
+    <div id="menu">
+        <button data-action="changeBackground">Змінити фон</button>
+        <button data-action="redirectPage">Перейти на сайт</button>
+        <button data-action="showAlert">Показати повідомлення</button>
+    </div>
+    <h2>Меню з поведінкою</h2>
+    <div id="menu-behavior">
+        <button data-action="addText" data-text="Це новий текст!">Додати текст</button>
+        <button data-action="removeText">Видалити текст</button>
+    </div>
+    <div id="text-container"></div>
+        
     <div class="store-info">
         <img src="https://gylyajpole.city/upload/article/o_1eoc8ob0b1a3l97n1umc1851jeq6p.jpg" alt="Фото магазину" class="store-image">
         <div class="store-description">
@@ -32,7 +39,14 @@
         </div>
     </div>
     <p>Тут предстиавлений каталог побутової техніки</p>
-    <p>Оберіть категорію:</p>
+    <h2>Список категорій</h2>
+    <ul id="category-list">
+        <li>Пральні машини</li>
+        <li>Блендери</li>
+        <li>Холодильники</li>
+        <li>Мікрохвильовки</li>
+    </ul>
+    
 
     <table>
         <tr>
@@ -40,27 +54,29 @@
             <th>Зображення</th>
             <th>Деталі</th>
         </tr>
-        <tr>
+        <tr class="product-category" id="washing-machines">
             <td>Пральні машини</td>
-            <td><a href="https://posh.co.uk/wp/wp-content/uploads/2024/12/best-washing-machine-cleaner.jpg"><img src="https://posh.co.uk/wp/wp-content/uploads/2024/12/best-washing-machine-cleaner.jpg" alt="Пральні машини"></a></td>
+            <td><img src="https://posh.co.uk/wp/wp-content/uploads/2024/12/best-washing-machine-cleaner.jpg" alt="Пральні машини"></td>
             <td><a href="washing_machines.html">Перейти</a></td>
         </tr>
-        <tr>
+        <tr class="product-category" id="blenders">
             <td>Блендери</td>
-            <td><a href="https://images.prom.ua/6146351453_w600_h600_6146351453.jpg"><img src="https://images.prom.ua/6146351453_w600_h600_6146351453.jpg" alt="Блендери"></a></td>
+            <td><img src="https://images.prom.ua/6146351453_w600_h600_6146351453.jpg" alt="Блендери"></td>
             <td><a href="blenders.html">Перейти</a></td>
         </tr>
-        <tr>
+        <tr class="product-category" id="refrigerators">
             <td>Холодильники</td>
-            <td><a href="https://images.samsung.com/is/image/samsung/p6pim/levant/rt47cg6002s9jo/gallery/levant-top-mount-freezer-optimal-fresh-and-space-max-rt47cg6002s9jo-536113897?$684_547_PNG$"><img src="https://images.samsung.com/is/image/samsung/p6pim/levant/rt47cg6002s9jo/gallery/levant-top-mount-freezer-optimal-fresh-and-space-max-rt47cg6002s9jo-536113897?$684_547_PNG$" alt="Холодильники"></a></td>
+            <td><img src="https://images.samsung.com/is/image/samsung/p6pim/levant/rt47cg6002s9jo/gallery/levant-top-mount-freezer-optimal-fresh-and-space-max-rt47cg6002s9jo-536113897?$684_547_PNG$" alt="Холодильники"></td>
             <td><a href="refrigerators.html">Перейти</a></td>
         </tr>
-        <tr>
+        <tr class="product-category" id="microwaves">
             <td>Мікрохвильовки</td>
-            <td><a href="https://codysappliancerepair.com/wp-content/uploads/2022/12/microwave-cooking-tricks.jpg"><img src="https://codysappliancerepair.com/wp-content/uploads/2022/12/microwave-cooking-tricks.jpg" alt="Мікрохвильовки"></a></td>
+            <td><img src="https://codysappliancerepair.com/wp-content/uploads/2022/12/microwave-cooking-tricks.jpg" alt="Мікрохвильовки"></td>
             <td><a href="microwaves.html">Перейти</a></td>
         </tr>
     </table>
+
+    <div id="infoDiv" style="margin-top: 20px; font-size: 18px; color: blue;"></div>
 
     <h2><div>Корисна інформація про побутову техніку</div></h2>
     <p><span>Тут Ви знайдете корисну інформацію про побутову техніку</span></p>
@@ -73,6 +89,6 @@
     <p>Цікавить робота в нас? Спробуйте пройти невеличку співбесіду:</p>
     <button onclick="interview()">Пройти співбесіду</button>
     <p>Розробник:</p>
-    <button onclick="showDeveloperInfo()">Інформація про розробника</button>
+    <button onclick="showDeveloperInfo('Трохименко', 'Максим')">Інформація про розробника</button>
 </footer>
 </html>
